@@ -47,6 +47,7 @@ class HomeController extends Controller
 //        return $books;
 //        $books = Book::with('product.category')->with('product')->limit(4)->get();
         $cats = Category::all();
+
         return Inertia::render('Frontend/Home', compact('user', 'journals', 'books', 'cats'));
     }
 

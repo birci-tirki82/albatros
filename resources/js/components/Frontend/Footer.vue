@@ -1,8 +1,17 @@
 <script setup>
+import {Link, usePage} from '@inertiajs/inertia-vue3'
+import {computed} from "vue";
+
 function logoPath() {
   return "../../../assets/images/";
 }
 
+const mainCats = computed(() => usePage().props.value.mainCats.mainCats).value
+
+// const props = defineProps({
+//   mainCats: Array,
+// })
+// console.log(props.mainCats)
 </script>
 
 <template>
@@ -36,11 +45,13 @@ function logoPath() {
           <div>
             <h3 class="text-m font-semibold text-gray-400 tracking-wider">Kategoriler</h3>
             <div class="mt-4 space-y-2">
-              <a href="#" class="text-sm  text-gray-500 hover:text-gray-900 block">Kitap</a>
-              <a href="#" class="text-sm text-gray-500 hover:text-gray-900 block">Dergi</a>
-              <a href="#" class="text-sm text-gray-500 hover:text-gray-900 block">Şiir</a>
-              <a href="#" class="text-sm text-gray-500 hover:text-gray-900 block">Roman</a>
-              <a href="#" class="text-sm text-gray-500 hover:text-gray-900 block">Edebiyat</a>
+              <Link v-for="maincat in mainCats" :href="route('kategori',{ cat: maincat.slug })" class="text-sm  text-gray-500 hover:text-gray-900 block">
+                {{maincat.name}}
+              </Link>
+<!--              <a href="#" class="text-sm text-gray-500 hover:text-gray-900 block">Dergi</a>-->
+<!--              <a href="#" class="text-sm text-gray-500 hover:text-gray-900 block">Şiir</a>-->
+<!--              <a href="#" class="text-sm text-gray-500 hover:text-gray-900 block">Roman</a>-->
+<!--              <a href="#" class="text-sm text-gray-500 hover:text-gray-900 block">Edebiyat</a>-->
             </div>
           </div>
 

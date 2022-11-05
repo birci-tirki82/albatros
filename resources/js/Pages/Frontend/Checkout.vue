@@ -122,11 +122,18 @@ function assetsPath() {
 function productPath() {
   return "../../../storage/images/products/";
 }
+const title = 'Ödeme';
+const description = 'odeme';
+
 </script>
 
 <template>
 
   <FrontendLayout>
+    <Head>
+      <title>{{ title }}</title>
+      <meta type="description" :content=description head-key="description">
+    </Head>
 
     <div class="container lg:mx-auto mx-3">
       <!-- breadcrumb -->
@@ -352,6 +359,10 @@ function productPath() {
                 </label>
               </div>
 
+
+              <div v-if="$page.props.flash.message" class="alert">
+                {{ $page.props.flash.message }}
+              </div>
 
               <div class="mt-4">
                 <label for="name" class="text-gray-600 ">Kart Üzerindeki İsim</label>

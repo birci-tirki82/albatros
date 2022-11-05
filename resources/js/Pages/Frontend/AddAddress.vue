@@ -46,14 +46,18 @@ function submit() {
 function assetsPath() {
   return "../../../assets/images/";
 }
-
+const title = 'Adres Ekle';
+const description = 'adres-ekle';
 
 </script>
 
 <template>
 
   <FrontendLayout >
-
+    <Head>
+      <title>{{ title }}</title>
+      <meta type="description" :content=description head-key="description">
+    </Head>
 
     <div class="mx-3">
       <!-- breadcrumb -->

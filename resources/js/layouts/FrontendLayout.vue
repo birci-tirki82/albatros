@@ -6,8 +6,9 @@ import Footer from "@/components/Frontend/Footer.vue";
 const props = defineProps({
   // user: Array,
   // cats: Array,
+  // mainCats: Array,
 })
-// console.log(props.user)
+// console.log(props.mainCats)
 
 import { mdiForwardburger, mdiBackburger, mdiMenu } from "@mdi/js";
 // import { useRouter } from "vue-router";

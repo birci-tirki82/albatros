@@ -45,13 +45,19 @@ function assetsPath() {
 //   // console.log(journalId)
 //   Inertia.get(route('sil', id));
 // }
-
+const title = 'Hesabım';
+const description = 'Hesabım';
 
 </script>
 
 <template>
 
   <FrontendLayout >
+
+    <Head>
+      <title>{{ title }}</title>
+      <meta type="description" :content=description head-key="description">
+    </Head>
 
     <div class="mx-3">
       <!-- breadcrumb -->

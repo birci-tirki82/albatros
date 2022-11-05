@@ -108,6 +108,10 @@ const update = () => {
 
 <template>
 
+  <div v-if="$page.props.flash.message" class="alert">
+    {{ $page.props.flash.message }}
+  </div>
+
   <CardBoxModal
     v-model="isModalActive"
     title="Güncelle"

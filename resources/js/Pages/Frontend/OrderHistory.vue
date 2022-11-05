@@ -37,13 +37,18 @@ const removeCart = (id) => {
   // console.log(journalId)
   Inertia.get(route('sil', id));
 }
-
+const title = 'Sipariş Geçmişim';
+const description = 'siparis-gecmisi';
 
 </script>
 
 <template>
 
   <FrontendLayout>
+    <Head>
+      <title>{{ title }}</title>
+      <meta type="description" :content=description head-key="description">
+    </Head>
 
     <!-- breadcrumb -->
     <div class="container py-4 flex items-center gap-3">

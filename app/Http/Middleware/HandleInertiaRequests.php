@@ -51,6 +51,7 @@ class HandleInertiaRequests extends Middleware
         $qty = 0;
         $favqty = 0;
         $categories = Category::where('is_active', 1)->limit(5)->get();
+        $mainCats = Category::where('parent_id', 0)->get();
         if(auth()->user()){
             $cartdata = Cart::where('user_id', auth()->user()->getAuthIdentifier())->get();
             $favdata = Favorite::where('user_id', auth()->user()->getAuthIdentifier())->get();
@@ -76,6 +77,12 @@ class HandleInertiaRequests extends Middleware
             ],
             'menucats' => [
                 'menucats' => $categories,
+            ],
+            'mainCats' => [
+                'mainCats' => $mainCats,
+            ],
+            'flash' => [
+                'message' => fn () => $request->session()->get('message')
             ],
             'ziggy' => function () use ($request) {
                 return array_merge((new Ziggy)->toArray(), [

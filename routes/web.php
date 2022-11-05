@@ -52,6 +52,7 @@ Route::get('favoriden-sil/{id}', [FavoriteController::class, 'remove'])->name('f
 
 Route::get('odeme', [CartController::class, 'checkout'])->name('odeme');
 Route::post('siparisi-tamamla', [PaymentController::class, 'payment'])->name('siparisi-tamamla');
+
 Route::get('sartlar-kosullar', [PaymentController::class, 'sartlarKosullar'])->name('sartlar-kosullar');
 
 

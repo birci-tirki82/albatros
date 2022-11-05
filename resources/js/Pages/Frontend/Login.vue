@@ -18,11 +18,19 @@ function submit() {
   Inertia.post(route('login'), form)
 }
 
+const title = 'Giriş';
+const description = 'giris';
+
 </script>
 
 <template>
 
   <FrontendLayout >
+
+    <Head>
+      <title>{{ title }}</title>
+      <meta type="description" :content=description head-key="description">
+    </Head>
   <!-- login -->
   <div class="contain py-16">
     <div class="max-w-lg mx-auto shadow px-6 py-7 rounded overflow-hidden">

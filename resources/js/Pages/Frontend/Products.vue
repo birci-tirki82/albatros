@@ -146,12 +146,20 @@ const checked = (isChecked) => {
   prods.value = birci.value;
 };
 
+const title = 'Ürünler';
+const description = 'urunler';
+
 
 </script>
 
 <template>
 
   <FrontendLayout>
+
+    <Head>
+      <title>{{ title }}</title>
+      <meta type="description" :content=description head-key="description">
+    </Head>
 
 <div class="mx-3">
     <!-- breadcrumb -->

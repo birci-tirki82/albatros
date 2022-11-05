@@ -29,6 +29,7 @@ const addCart = (id) => {
 }
 
 const title = 'Anasayfa';
+const description = 'Anasayfa';
 
 </script>
 
@@ -38,7 +39,7 @@ const title = 'Anasayfa';
 
     <Head>
       <title>{{ title }}</title>
-      <meta type="description" content="deneme" head-key="description">
+      <meta type="description" :content=description head-key="description">
     </Head>
 
     <!-- banner -->

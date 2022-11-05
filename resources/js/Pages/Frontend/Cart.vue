@@ -39,12 +39,17 @@ const removeCart = (id) => {
   Inertia.get(route('sil', id));
 }
 
-
+const title = 'Sepet';
+const description = 'sepet';
 </script>
 
 <template>
 
   <FrontendLayout>
+    <Head>
+      <title>{{ title }}</title>
+      <meta type="description" :content=description head-key="description">
+    </Head>
 
     <div class="lg:mx-auto mx-3">
       <!-- breadcrumb -->

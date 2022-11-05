@@ -50,13 +50,18 @@ function removeAddress (id) {
 //   // console.log(journalId)
 //   Inertia.get(route('sil', id));
 // }
-
+const title = 'Adresler';
+const description = 'adresler';
 
 </script>
 
 <template>
 
   <FrontendLayout >
+    <Head>
+      <title>{{ title }}</title>
+      <meta type="description" :content=description head-key="description">
+    </Head>
 
     <div class="mx-3">
       <!-- breadcrumb -->

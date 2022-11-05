@@ -127,7 +127,7 @@ class BookController extends Controller
         }
 
 
-        return redirect()->route('book.index');
+        return redirect()->route('book.index')->with('message', 'Kitap Eklendi');
     }
 
     /**

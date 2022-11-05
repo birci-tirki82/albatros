@@ -27,7 +27,7 @@ class PaymentController extends Controller
 {
     public function sartlarKosullar()
     {
-        return Inertia::render('Frontend/SartlarVeKosullar/SartlarKosullar');
+        return Inertia::render('Frontend/ProsedurPages/SartlarKosullar');
     }
 
     public function payment(Request $request)

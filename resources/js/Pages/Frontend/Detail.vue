@@ -44,6 +44,7 @@ const addFavorite = (id) => {
 }
 
 const title = props.detail.product.name;
+const description = props.detail.product.name;
 // console.log(title)
 </script>
 
@@ -52,7 +53,7 @@ const title = props.detail.product.name;
   <FrontendLayout>
     <Head>
       <title>{{ title }}</title>
-<!--      <meta type="description" content="Detay içerik" head-key="description">-->
+      <meta type="description" :content=description head-key="description">
     </Head>
 
     <div class="container lg:mx-auto mx-3">
